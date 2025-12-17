@@ -1129,210 +1129,6 @@
             margin-bottom: 15px;
         }
 
-        /* Online Booking Styles */
-        .public-booking-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .public-booking-content {
-            background: white;
-            border-radius: 15px;
-            width: 100%;
-            max-width: 900px;
-            max-height: 90vh;
-            overflow-y: auto;
-            animation: slideUp 0.3s ease-out;
-        }
-
-        .payment-option {
-            border: 2px solid var(--border-color);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            background: var(--card-bg);
-            color: var(--text-color);
-        }
-
-        .payment-option:hover {
-            border-color: var(--secondary);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .payment-option.selected {
-            border-color: var(--success);
-            background: rgba(39, 174, 96, 0.1);
-        }
-
-        .payment-option h4 {
-            color: var(--primary);
-            margin: 10px 0;
-        }
-
-        .payment-icon {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .mobile-money { color: #27ae60; }
-        .visa-card { color: #3498db; }
-        .cash { color: #f39c12; }
-
-        .payment-details {
-            margin-top: 15px;
-            padding: 15px;
-            background: var(--light);
-            border-radius: 8px;
-            border-left: 4px solid var(--secondary);
-            animation: fadeIn 0.3s ease-out;
-        }
-
-        /* Online Booking Steps */
-        .booking-step {
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        .step-indicator {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            gap: 20px;
-        }
-
-        .step {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .step-number {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--border-color);
-            color: var(--text-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 18px;
-            transition: var(--transition);
-        }
-
-        .step.active .step-number {
-            background: var(--secondary);
-            color: white;
-            transform: scale(1.1);
-        }
-
-        .step.completed .step-number {
-            background: var(--success);
-            color: white;
-        }
-
-        .step-label {
-            font-size: 12px;
-            color: var(--text-color);
-            opacity: 0.7;
-        }
-
-        /* Online Booking Room Cards */
-        .online-room-card {
-            background: var(--card-bg);
-            border: 3px solid var(--border-color);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition);
-            position: relative;
-            animation: popIn 0.3s ease-out;
-        }
-
-        .online-room-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .online-room-card.selected {
-            border-color: var(--success);
-            background: rgba(39, 174, 96, 0.1);
-            animation: pulse 1.5s infinite;
-        }
-
-        .online-room-card.booked {
-            border-color: var(--accent);
-            background: rgba(231, 76, 60, 0.1);
-            cursor: not-allowed;
-            opacity: 0.7;
-        }
-
-        .online-room-card.reserved {
-            border-color: var(--warning);
-            background: rgba(243, 156, 18, 0.1);
-        }
-
-        .room-selection-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--success);
-            color: white;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        /* Booking Summary */
-        .booking-summary {
-            background: var(--light);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--info);
-        }
-
-        .summary-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .summary-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .summary-total {
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 2px solid var(--border-color);
-        }
-
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -1383,62 +1179,6 @@
                 flex-direction: column;
                 align-items: stretch;
             }
-            
-            .public-booking-content {
-                width: 95%;
-                margin: 10px;
-                padding: 15px;
-            }
-            
-            .step-indicator {
-                gap: 10px;
-                flex-wrap: wrap;
-            }
-            
-            .step {
-                flex: 1;
-                min-width: 80px;
-            }
-            
-            .payment-option {
-                margin-bottom: 15px;
-            }
-            
-            .online-room-card {
-                padding: 15px;
-            }
-        }
-
-        /* Online Booking Button */
-        .online-booking-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-            background: linear-gradient(135deg, #27ae60, #2ecc71);
-            color: white;
-            border: none;
-            padding: 18px 30px;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: bold;
-            font-size: 17px;
-            animation: float 3s ease-in-out infinite;
-            transition: all 0.3s ease;
-        }
-
-        .online-booking-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(39, 174, 96, 0.6);
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
         }
     </style>
 </head>
@@ -1447,7 +1187,7 @@
     <div id="loginContainer" class="login-container">
         <div class="login-form">
             <h2><i class="fas fa-hotel"></i> PEAK MOTEL KASESE</h2>
-            <p>Professional Booking & Management System</p>
+            <p>Booking & Management System</p>
             <form id="loginForm">
                 <div class="form-group">
                     <label for="loginEmail">Email Address</label>
@@ -1845,7 +1585,6 @@
                 </div>
                 <form id="editBookingForm">
                     <input type="hidden" id="editBookingId">
-                    <input type="hidden" id="editBookingType">
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="editGuestName">Full Name *</label>
@@ -1868,7 +1607,7 @@
                             <input type="number" id="editNights" class="form-control" min="1" required>
                         </div>
                         <div class="form-group">
-                            <label for="editRoom">Room *</label>
+                            <label for="editRoom">Room Number *</label>
                             <select id="editRoom" class="form-control" required>
                                 <!-- Rooms will be populated dynamically -->
                             </select>
@@ -1906,245 +1645,6 @@
         <div id="alertContainer" style="position: fixed; top: 20px; right: 20px; z-index: 9999; max-width: 400px;"></div>
     </div>
 
-    <!-- Public Online Booking Portal (Always visible button) -->
-    <button id="onlineBookingBtn" class="online-booking-btn">
-        <i class="fas fa-globe"></i> Book Online
-    </button>
-
-    <!-- Online Booking Modal -->
-    <div id="onlineBookingPortal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 99999; justify-content: center; align-items: center; padding: 20px;">
-        <div style="background: white; border-radius: 15px; width: 90%; max-width: 900px; max-height: 90vh; overflow-y: auto; padding: 30px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h2 style="color: #2c3e50;">
-                    <i class="fas fa-globe"></i> Online Booking - Peak Motel Kasese
-                </h2>
-                <button onclick="closeOnlineBooking()" style="background: none; border: none; font-size: 24px; cursor: pointer; color: #e74c3c;">
-                    &times;
-                </button>
-            </div>
-            
-            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-                <!-- Left Column - Booking Form -->
-                <div style="flex: 2; min-width: 300px;">
-                    <h3 style="color: #3498db; margin-bottom: 20px;">
-                        <i class="fas fa-calendar-plus"></i> Book Your Stay Online
-                    </h3>
-                    
-                    <div id="onlineBookingSteps">
-                        <!-- Step 1: Guest Details -->
-                        <div id="onlineStep1" style="display: block;">
-                            <h4 style="color: #2c3e50; margin-bottom: 15px;">Step 1: Guest Information</h4>
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-                                <div>
-                                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name *</label>
-                                    <input type="text" id="onlineGuestName" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Your full name" required>
-                                </div>
-                                <div>
-                                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email *</label>
-                                    <input type="email" id="onlineGuestEmail" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="your@email.com" required>
-                                </div>
-                                <div>
-                                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Phone Number *</label>
-                                    <input type="tel" id="onlineGuestPhone" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="+256 XXX XXX XXX" required>
-                                </div>
-                                <div>
-                                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">ID/Passport Number</label>
-                                    <input type="text" id="onlineGuestId" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" placeholder="Optional">
-                                </div>
-                                <div>
-                                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Check-in Date *</label>
-                                    <input type="date" id="onlineCheckin" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" required>
-                                </div>
-                                <div>
-                                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Check-out Date *</label>
-                                    <input type="date" id="onlineCheckout" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" required>
-                                </div>
-                                <div>
-                                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Number of Nights</label>
-                                    <input type="number" id="onlineNights" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;" value="1" min="1" readonly>
-                                </div>
-                                <div>
-                                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Number of Guests</label>
-                                    <select id="onlineGuestsCount" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-                                        <option value="1">1 Guest</option>
-                                        <option value="2">2 Guests</option>
-                                        <option value="3">3 Guests</option>
-                                        <option value="4">4 Guests</option>
-                                        <option value="5">5+ Guests</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <button onclick="showOnlineStep2()" style="background: #3498db; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; margin-top: 20px; float: right;">
-                                Next: Select Rooms <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                        
-                        <!-- Step 2: Room Selection -->
-                        <div id="onlineStep2" style="display: none;">
-                            <h4 style="color: #2c3e50; margin-bottom: 15px;">Step 2: Room Selection (50,000 UGX per night)</h4>
-                            <div id="onlineRoomsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; margin-bottom: 20px;">
-                                <!-- Rooms will be loaded dynamically -->
-                            </div>
-                            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                                <button onclick="showOnlineStep1()" style="background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-                                    <i class="fas fa-arrow-left"></i> Back
-                                </button>
-                                <button onclick="showOnlineStep3()" style="background: #3498db; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-                                    Next: Payment <i class="fas fa-arrow-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 3: Payment Selection -->
-                        <div id="onlineStep3" style="display: none;">
-                            <h4 style="color: #2c3e50; margin-bottom: 15px;">Step 3: Payment Method</h4>
-                            <p style="margin-bottom: 20px; color: #666;">Select your preferred payment method:</p>
-                            
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px;">
-                                <!-- Mobile Money Option -->
-                                <div onclick="selectPaymentMethod('mobile_money')" style="border: 2px solid #ddd; border-radius: 10px; padding: 20px; text-align: center; cursor: pointer; transition: all 0.3s;" id="mobileMoneyOption">
-                                    <div style="font-size: 40px; color: #27ae60; margin-bottom: 10px;">
-                                        <i class="fas fa-mobile-alt"></i>
-                                    </div>
-                                    <h4 style="margin: 10px 0; color: #2c3e50;">Mobile Money</h4>
-                                    <p style="color: #666; font-size: 14px;">Pay via MTN Mobile Money or Airtel Money</p>
-                                    <div style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px; display: none;" id="mobileMoneyDetails">
-                                        <p style="font-size: 12px; margin: 5px 0;"><strong>MTN:</strong> 0772 XXX XXX</p>
-                                        <p style="font-size: 12px; margin: 5px 0;"><strong>Airtel:</strong> 0752 XXX XXX</p>
-                                        <p style="font-size: 12px; color: #e74c3c; margin-top: 10px;">Include booking ID in payment reference</p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Credit Card Option -->
-                                <div onclick="selectPaymentMethod('visa')" style="border: 2px solid #ddd; border-radius: 10px; padding: 20px; text-align: center; cursor: pointer; transition: all 0.3s;" id="visaOption">
-                                    <div style="font-size: 40px; color: #3498db; margin-bottom: 10px;">
-                                        <i class="fab fa-cc-visa"></i>
-                                    </div>
-                                    <h4 style="margin: 10px 0; color: #2c3e50;">Visa/Mastercard</h4>
-                                    <p style="color: #666; font-size: 14px;">Secure online payment via card</p>
-                                    <div style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px; display: none;" id="visaDetails">
-                                        <p style="font-size: 12px; color: #e74c3c;">Secure payment gateway coming soon</p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Pay on Arrival Option -->
-                                <div onclick="selectPaymentMethod('cash')" style="border: 2px solid #ddd; border-radius: 10px; padding: 20px; text-align: center; cursor: pointer; transition: all 0.3s;" id="cashOption">
-                                    <div style="font-size: 40px; color: #f39c12; margin-bottom: 10px;">
-                                        <i class="fas fa-money-bill-wave"></i>
-                                    </div>
-                                    <h4 style="margin: 10px 0; color: #2c3e50;">Pay on Arrival</h4>
-                                    <p style="color: #666; font-size: 14px;">Pay with cash when you check-in</p>
-                                    <div style="margin-top: 15px; padding: 10px; background: #f8f9fa; border-radius: 5px; display: none;" id="cashDetails">
-                                        <p style="font-size: 12px; color: #e74c3c;">Booking must be confirmed by phone</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Payment Summary -->
-                            <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-                                <h5 style="color: #2c3e50; margin-bottom: 15px;">Booking Summary</h5>
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span>Selected Rooms:</span>
-                                    <span id="onlineSelectedRoomsCount">0</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span>Nights:</span>
-                                    <span id="onlineSelectedNights">1</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                                    <span>Room Rate:</span>
-                                    <span>50,000 UGX/night</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: bold;">
-                                    <span>Total Amount:</span>
-                                    <span id="onlineTotalAmount">0 UGX</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 12px; color: #27ae60;">
-                                    <span>Payment Method:</span>
-                                    <span id="onlinePaymentMethod">Not selected</span>
-                                </div>
-                            </div>
-                            
-                            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
-                                <button onclick="showOnlineStep2()" style="background: #95a5a6; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
-                                    <i class="fas fa-arrow-left"></i> Back
-                                </button>
-                                <button onclick="submitOnlineBooking()" style="background: #27ae60; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;" id="submitOnlineBookingBtn">
-                                    <i class="fas fa-check-circle"></i> Complete Booking
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <!-- Step 4: Confirmation -->
-                        <div id="onlineStep4" style="display: none; text-align: center; padding: 40px 20px;">
-                            <div style="font-size: 80px; color: #27ae60; margin-bottom: 20px;">
-                                <i class="fas fa-check-circle"></i>
-                            </div>
-                            <h3 style="color: #2c3e50; margin-bottom: 15px;">Booking Submitted Successfully!</h3>
-                            <p style="color: #666; margin-bottom: 10px;">Your booking ID: <strong id="onlineBookingId"></strong></p>
-                            <p style="color: #666; margin-bottom: 20px;">We have sent a confirmation email to <strong id="onlineBookingEmail"></strong></p>
-                            <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
-                                <h5 style="color: #2c3e50; margin-bottom: 10px;">Next Steps:</h5>
-                                <p style="color: #666; font-size: 14px; margin-bottom: 10px;">
-                                    <i class="fas fa-mobile-alt" style="color: #27ae60;"></i> 
-                                    <strong>Mobile Money Payment:</strong> Send payment to numbers above with your Booking ID
-                                </p>
-                                <p style="color: #666; font-size: 14px;">
-                                    <i class="fas fa-phone" style="color: #3498db;"></i> 
-                                    <strong>Confirmation:</strong> Our staff will call you within 30 minutes
-                                </p>
-                            </div>
-                            <button onclick="closeOnlineBooking()" style="background: #3498db; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; margin-top: 20px;">
-                                Close <i class="fas fa-times"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Right Column - Information -->
-                <div style="flex: 1; min-width: 250px; background: #f8f9fa; border-radius: 10px; padding: 20px;">
-                    <h4 style="color: #2c3e50; margin-bottom: 15px;">
-                        <i class="fas fa-info-circle"></i> Important Information
-                    </h4>
-                    <ul style="color: #666; padding-left: 20px;">
-                        <li style="margin-bottom: 10px;">Check-in: 2:00 PM</li>
-                        <li style="margin-bottom: 10px;">Check-out: 11:00 AM</li>
-                        <li style="margin-bottom: 10px;">Rate: 50,000 UGX per room per night</li>
-                        <li style="margin-bottom: 10px;">Includes breakfast</li>
-                        <li style="margin-bottom: 10px;">Free Wi-Fi available</li>
-                        <li style="margin-bottom: 10px;">Parking space available</li>
-                    </ul>
-                    
-                    <h4 style="color: #2c3e50; margin-top: 30px; margin-bottom: 15px;">
-                        <i class="fas fa-phone"></i> Contact Information
-                    </h4>
-                    <p style="color: #666; margin-bottom: 10px;">
-                        <i class="fas fa-map-marker-alt" style="color: #e74c3c;"></i> 
-                        Kasese Town, Uganda
-                    </p>
-                    <p style="color: #666; margin-bottom: 10px;">
-                        <i class="fas fa-phone" style="color: #27ae60;"></i> 
-                        +256 772 XXX XXX
-                    </p>
-                    <p style="color: #666; margin-bottom: 10px;">
-                        <i class="fas fa-envelope" style="color: #3498db;"></i> 
-                        bookings@peakmotelkasese.com
-                    </p>
-                    
-                    <div style="margin-top: 30px; padding: 15px; background: white; border-radius: 5px; border-left: 4px solid #3498db;">
-                        <h5 style="color: #2c3e50; margin-bottom: 10px;">Need Help?</h5>
-                        <p style="color: #666; font-size: 14px;">
-                            Call us directly for assistance with your online booking
-                        </p>
-                        <button onclick="callForHelp()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; width: 100%; margin-top: 10px;">
-                            <i class="fas fa-phone"></i> Call Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <script>
         // ============================
         // APPLICATION STATE
@@ -2159,11 +1659,6 @@
         let isMultiRoomMode = false; // Tracks if we're in multi-room selection mode
         let currentReportData = null; // Store current report data for export
         
-        // Online booking state
-        let onlineSelectedRooms = [];
-        let onlineSelectedPaymentMethod = null;
-        let onlineCurrentStep = 1;
-        
         // Chart instances for reports
         let revenueChart = null;
         let occupancyChart = null;
@@ -2174,26 +1669,26 @@
         // Chart.js loading state
         let chartJSLoaded = false;
         
-        // Updated room names (only names, no A1-A10)
+        // Updated room names
         const roomNames = [
-            'ABASU',
-            'ABAKUNDA',
-            'ABAKIIRA',
-            'ABAHIIRA',
-            'ABATHANGI',
-            'ABASONGORA',
-            'ABASWAGHA',
-            'ABASERU',
-            'ABABINGA',
-            'ABAHAMBU'
+            { id: 'A1', name: 'ABASU' },
+            { id: 'A2', name: 'ABAKUNDA' },
+            { id: 'A3', name: 'ABAKIIRA' },
+            { id: 'A4', name: 'ABAHIIRA' },
+            { id: 'A5', name: 'ABATHANGI' },
+            { id: 'A6', name: 'ABASONGORA' },
+            { id: 'A7', name: 'ABASWAGHA' },
+            { id: 'A8', name: 'ABASERU' },
+            { id: 'A9', name: 'ABABINGA' },
+            { id: 'A10', name: 'ABAHAMBU' }
         ];
 
         // Initialize rooms array
-        roomNames.forEach((roomName, index) => {
+        roomNames.forEach(room => {
             rooms.push({
-                id: roomName.toLowerCase().replace(/\s+/g, '-'),
-                name: roomName,
-                number: `Room ${index + 1}`,
+                id: room.id,
+                name: room.name,
+                number: room.id,
                 price: 50000,
                 status: 'available',
                 bookingId: null,
@@ -2242,10 +1737,6 @@
         const bookingTabBtn = document.getElementById('bookingTabBtn');
         const roomSelectionBadge = document.getElementById('roomSelectionBadge');
 
-        // Online booking elements
-        const onlineBookingBtn = document.getElementById('onlineBookingBtn');
-        const onlineBookingPortal = document.getElementById('onlineBookingPortal');
-
         // Form elements
         const guestName = document.getElementById('guestName');
         const guestEmail = document.getElementById('guestEmail');
@@ -2266,7 +1757,6 @@
         const editTotalCost = document.getElementById('editTotalCost');
         const editStatus = document.getElementById('editStatus');
         const editBookingId = document.getElementById('editBookingId');
-        const editBookingType = document.getElementById('editBookingType');
 
         // Chart status elements
         const chartStatus = document.getElementById('chartStatus');
@@ -2431,9 +1921,6 @@
             if (chartStatus) {
                 chartStatus.style.display = 'flex';
             }
-            
-            // Setup online booking button
-            onlineBookingBtn.addEventListener('click', openOnlineBooking);
         }
 
         function initializeReportDatePickers() {
@@ -2583,14 +2070,7 @@
                 if (e.target === editModal) {
                     editModal.style.display = 'none';
                 }
-                if (e.target === onlineBookingPortal) {
-                    closeOnlineBooking();
-                }
             });
-            
-            // Online booking date change listeners
-            document.getElementById('onlineCheckin')?.addEventListener('change', updateOnlineNights);
-            document.getElementById('onlineCheckout')?.addEventListener('change', updateOnlineNights);
         }
 
         // ============================
@@ -2993,9 +2473,6 @@
                         roomNumber: room.number,
                         totalCost: nightsCount * pricePerRoomPerNight,
                         status: 'confirmed',
-                        bookingType: 'walk-in',
-                        paymentMethod: 'cash',
-                        paymentStatus: 'unpaid',
                         createdAt: window.firebase.serverTimestamp(),
                         updatedAt: window.firebase.serverTimestamp(),
                         createdBy: currentUser.email,
@@ -3130,9 +2607,6 @@
                         nights: booking.nights,
                         totalCost: 0,
                         status: booking.status,
-                        bookingType: booking.bookingType || 'walk-in',
-                        paymentMethod: booking.paymentMethod,
-                        paymentStatus: booking.paymentStatus || 'unpaid',
                         createdAt: booking.createdAt
                     };
                 }
@@ -3156,7 +2630,6 @@
                             <th>Nights</th>
                             <th>Amount</th>
                             <th>Status</th>
-                            <th>Type/Payment</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -3164,50 +2637,13 @@
             `;
             
             bookingGroups.forEach(group => {
-                // Get room information
-                let roomList = '';
-                if (group.bookings.length > 0) {
-                    const firstBooking = group.bookings[0];
-                    if (group.bookingType === 'online') {
-                        // For online bookings, show the room name and number
-                        roomList = `${firstBooking.roomName || firstBooking.room} (${firstBooking.roomNumber || ''})`;
-                    } else {
-                        // For walk-in bookings
-                        const room = rooms.find(r => r.id === firstBooking.room);
-                        roomList = `${room ? room.name : firstBooking.room} (${room ? room.number : ''})`;
-                    }
-                }
+                const roomList = group.bookings.map(b => {
+                    const roomName = b.roomName || b.room;
+                    const roomNumber = b.roomNumber || '';
+                    return `${roomName}${roomNumber ? ` (${roomNumber})` : ''}`;
+                }).join(', ');
                 
                 const isMultiRoom = group.bookings.length > 1;
-                
-                // Determine booking type badge
-                const bookingTypeBadge = group.bookingType === 'online' 
-                    ? `<span class="status-badge" style="background: #3498db; color: white; margin-top: 5px; display: inline-block;">Online</span>`
-                    : `<span class="status-badge" style="background: #95a5a6; color: white; margin-top: 5px; display: inline-block;">Walk-in</span>`;
-                
-                // Determine payment method
-                let paymentBadge = '';
-                if (group.paymentMethod) {
-                    let paymentColor = '#95a5a6';
-                    let paymentText = group.paymentMethod;
-                    
-                    switch(group.paymentMethod) {
-                        case 'mobile_money':
-                            paymentColor = '#27ae60';
-                            paymentText = 'Mobile Money';
-                            break;
-                        case 'visa':
-                            paymentColor = '#3498db';
-                            paymentText = 'Visa';
-                            break;
-                        case 'cash':
-                            paymentColor = '#f39c12';
-                            paymentText = 'Cash';
-                            break;
-                    }
-                    
-                    paymentBadge = `<span class="status-badge" style="background: ${paymentColor}; color: white; margin-top: 5px; display: inline-block;">${paymentText}</span>`;
-                }
                 
                 html += `
                     <tr>
@@ -3224,15 +2660,6 @@
                             <span class="status-badge ${group.status || 'confirmed'}">
                                 ${group.status || 'confirmed'}
                             </span>
-                        </td>
-                        <td>
-                            ${bookingTypeBadge}
-                            ${paymentBadge}
-                            ${group.paymentStatus === 'paid' ? 
-                                '<span class="status-badge" style="background: #27ae60; color: white; margin-top: 5px; display: inline-block;">Paid</span>' : 
-                                group.paymentStatus === 'pending' ?
-                                '<span class="status-badge" style="background: #f39c12; color: white; margin-top: 5px; display: inline-block;">Pending</span>' : 
-                                '<span class="status-badge" style="background: #e74c3c; color: white; margin-top: 5px; display: inline-block;">Unpaid</span>'}
                         </td>
                         <td>
                             <div class="action-btns">
@@ -3322,7 +2749,6 @@
                 editNights.value = booking.nights;
                 editTotalCost.value = (booking.totalCost || 0).toLocaleString() + ' UGX';
                 editStatus.value = booking.status || 'confirmed';
-                editBookingType.value = booking.bookingType || 'walk-in';
                 
                 // Populate room options
                 editRoom.innerHTML = '';
@@ -3350,45 +2776,21 @@
         async function updateBooking(e) {
             e.preventDefault();
             
+            const bookingData = {
+                guestName: editGuestName.value,
+                guestPhone: editGuestPhone.value,
+                checkinDate: editCheckinDate.value,
+                checkoutDate: editCheckoutDate.value,
+                nights: parseInt(editNights.value),
+                room: editRoom.value,
+                totalCost: parseInt(editNights.value) * 50000,
+                status: editStatus.value,
+                updatedAt: window.firebase.serverTimestamp()
+            };
+            
             try {
-                // Get current booking data
-                const bookingRef = window.firebase.doc(window.firebase.db, 'bookings', editBookingId.value);
-                const doc = await window.firebase.getDoc(bookingRef);
-                
-                if (!doc.exists()) {
-                    showAlert('Booking not found', 'error');
-                    return;
-                }
-                
-                const currentBooking = doc.data();
-                const bookingType = editBookingType.value || currentBooking.bookingType || 'walk-in';
-                
-                // Get room info
-                const selectedRoom = rooms.find(r => r.id === editRoom.value);
-                if (!selectedRoom && bookingType !== 'online') {
-                    showAlert('Selected room not found', 'error');
-                    return;
-                }
-                
-                const bookingData = {
-                    guestName: editGuestName.value,
-                    guestPhone: editGuestPhone.value,
-                    checkinDate: editCheckinDate.value,
-                    checkoutDate: editCheckoutDate.value,
-                    nights: parseInt(editNights.value),
-                    totalCost: parseInt(editNights.value) * 50000,
-                    status: editStatus.value,
-                    updatedAt: window.firebase.serverTimestamp()
-                };
-                
-                // Only update room fields if it's not an online booking (online bookings keep their original room)
-                if (bookingType !== 'online' && selectedRoom) {
-                    bookingData.room = editRoom.value;
-                    bookingData.roomName = selectedRoom.name;
-                    bookingData.roomNumber = selectedRoom.number;
-                }
-                
                 // Update booking
+                const bookingRef = window.firebase.doc(window.firebase.db, 'bookings', editBookingId.value);
                 await window.firebase.updateDoc(bookingRef, bookingData);
                 
                 // Close modal and refresh
@@ -3400,7 +2802,7 @@
                 
             } catch (error) {
                 console.error('Error updating booking:', error);
-                showAlert('Error updating booking: ' + error.message, 'error');
+                showAlert('Error updating booking', 'error');
             }
         }
 
@@ -3415,13 +2817,6 @@
                 for (const booking of bookingsToDelete) {
                     const bookingRef = window.firebase.doc(window.firebase.db, 'bookings', booking.id);
                     await window.firebase.deleteDoc(bookingRef);
-                    
-                    // Free up the room
-                    const roomIndex = rooms.findIndex(r => r.id === booking.room);
-                    if (roomIndex !== -1) {
-                        rooms[roomIndex].status = 'available';
-                        rooms[roomIndex].bookingId = null;
-                    }
                 }
                 
                 // Remove from local array
@@ -3442,21 +2837,8 @@
             if (!confirm('Are you sure you want to delete this booking?')) return;
             
             try {
-                // Get booking details first to free up the room
-                const bookingRef = window.firebase.doc(window.firebase.db, 'bookings', bookingId);
-                const doc = await window.firebase.getDoc(bookingRef);
-                
-                if (doc.exists()) {
-                    const booking = doc.data();
-                    // Free up the room
-                    const roomIndex = rooms.findIndex(r => r.id === booking.room);
-                    if (roomIndex !== -1) {
-                        rooms[roomIndex].status = 'available';
-                        rooms[roomIndex].bookingId = null;
-                    }
-                }
-                
                 // Delete from Firestore
+                const bookingRef = window.firebase.doc(window.firebase.db, 'bookings', bookingId);
                 await window.firebase.deleteDoc(bookingRef);
                 
                 // Remove from local array
@@ -3588,7 +2970,7 @@
                             <div style="padding: 10px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
                                 <div>
                                     <strong>${data.guestName}</strong><br>
-                                    <small>Room: ${room ? room.name : data.room} (${room ? room.number : ''})</small>
+                                    <small>Room: ${room ? room.name : data.room}</small>
                                 </div>
                                 <span class="status-badge ${data.status || 'confirmed'}">${data.status || 'confirmed'}</span>
                             </div>
@@ -3614,7 +2996,7 @@
                             <div style="padding: 10px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
                                 <div>
                                     <strong>${data.guestName}</strong><br>
-                                    <small>Room: ${room ? room.name : data.room} (${room ? room.number : ''})</small>
+                                    <small>Room: ${room ? room.name : data.room}</small>
                                 </div>
                                 <button class="btn btn-success" style="padding: 5px 10px; font-size: 12px;" onclick="checkOutGuest('${doc.id}')">
                                     Check Out
@@ -3831,22 +3213,17 @@
                 guestStats[booking.guestPhone].nights += booking.nights || 0;
                 
                 // Track room performance
-                const roomName = booking.roomName || booking.room;
-                const roomNumber = booking.roomNumber || '';
-                const roomKey = `${roomName}-${roomNumber}`;
-                
-                if (!roomStats[roomKey]) {
-                    roomStats[roomKey] = {
-                        roomName: roomName,
-                        roomNumber: roomNumber,
+                if (!roomStats[booking.room]) {
+                    roomStats[booking.room] = {
+                        roomName: booking.roomName || booking.room,
                         bookings: 0,
                         revenue: 0,
                         nights: 0
                     };
                 }
-                roomStats[roomKey].bookings++;
-                roomStats[roomKey].revenue += booking.revenue || booking.totalCost || 0;
-                roomStats[roomKey].nights += booking.nights || 0;
+                roomStats[booking.room].bookings++;
+                roomStats[booking.room].revenue += booking.revenue || booking.totalCost || 0;
+                roomStats[booking.room].nights += booking.nights || 0;
                 
                 // Track daily data
                 const date = booking.checkinDate;
@@ -3944,7 +3321,7 @@
                 row.innerHTML = `
                     <td>${room.rank}</td>
                     <td>${room.roomName}</td>
-                    <td>${room.roomNumber}</td>
+                    <td>${room.roomName}</td>
                     <td>${room.bookings}</td>
                     <td>${room.revenue.toLocaleString()} UGX</td>
                     <td>${room.nights}</td>
@@ -3964,7 +3341,7 @@
                 row.innerHTML = `
                     <td>${formatDate(booking.createdAt?.toDate?.() || booking.bookingDate)}</td>
                     <td>${booking.guestName}</td>
-                    <td>${booking.roomName || booking.room} (${booking.roomNumber || ''})</td>
+                    <td>${booking.roomName || booking.room}</td>
                     <td>${formatDate(booking.checkinDate)}</td>
                     <td>${formatDate(booking.checkoutDate)}</td>
                     <td>${booking.nights}</td>
@@ -4302,9 +3679,9 @@
             csvContent += "Total Guests," + currentReportData.totalGuests + "\n\n";
             
             csvContent += "Room Performance\n";
-            csvContent += "Rank,Room Name,Room Number,Bookings,Revenue,Nights,Occupancy,Avg Stay\n";
+            csvContent += "Rank,Room,Bookings,Revenue,Nights,Occupancy,Avg Stay\n";
             currentReportData.roomStats.forEach(room => {
-                csvContent += `${room.rank},${room.roomName},${room.roomNumber},${room.bookings},${room.revenue},${room.nights},${room.occupancy}%,${room.avgStay}\n`;
+                csvContent += `${room.rank},${room.roomName},${room.bookings},${room.revenue},${room.nights},${room.occupancy}%,${room.avgStay}\n`;
             });
             
             csvContent += "\nDaily Revenue\n";
@@ -4341,14 +3718,14 @@
                 }
                 
                 const { jsPDF } = window.jspdf;
-                const doc = new jsPDF('p', 'mm', 'a4');
+                const doc = new jsPDF();
                 
                 // Add header
                 doc.setFontSize(20);
                 doc.setTextColor(44, 62, 80);
-                doc.text('PEAK MOTEL KASESE', 105, 15, { align: 'center' });
+                doc.text('PEAK MOTEL KASESE', 105, 15, null, null, 'center');
                 doc.setFontSize(12);
-                doc.text('Booking Report', 105, 22, { align: 'center' });
+                doc.text('Booking Report', 105, 22, null, null, 'center');
                 
                 // Add date
                 doc.setFontSize(10);
@@ -4369,7 +3746,7 @@
                 let yPos = 95;
                 doc.setFontSize(14);
                 doc.text('Room Performance', 15, yPos);
-                yPos += 10;
+                yPos += 5;
                 
                 // Table headers
                 doc.setFontSize(10);
@@ -4377,12 +3754,11 @@
                 doc.setTextColor(255, 255, 255);
                 doc.rect(15, yPos, 180, 7, 'F');
                 doc.text('Rank', 20, yPos + 5);
-                doc.text('Room Name', 40, yPos + 5);
-                doc.text('Room #', 90, yPos + 5);
-                doc.text('Bookings', 110, yPos + 5);
-                doc.text('Revenue (UGX)', 130, yPos + 5);
-                doc.text('Nights', 160, yPos + 5);
-                doc.text('Occupancy', 175, yPos + 5);
+                doc.text('Room', 40, yPos + 5);
+                doc.text('Bookings', 70, yPos + 5);
+                doc.text('Revenue (UGX)', 100, yPos + 5);
+                doc.text('Nights', 140, yPos + 5);
+                doc.text('Occupancy', 160, yPos + 5);
                 
                 yPos += 10;
                 doc.setTextColor(0, 0, 0);
@@ -4392,36 +3768,14 @@
                     if (yPos > 270) {
                         doc.addPage();
                         yPos = 20;
-                        
-                        // Add header to new page
-                        doc.setFontSize(14);
-                        doc.text('Room Performance (continued)', 15, yPos);
-                        yPos += 10;
-                        
-                        // Table headers for new page
-                        doc.setFontSize(10);
-                        doc.setFillColor(44, 62, 80);
-                        doc.setTextColor(255, 255, 255);
-                        doc.rect(15, yPos, 180, 7, 'F');
-                        doc.text('Rank', 20, yPos + 5);
-                        doc.text('Room Name', 40, yPos + 5);
-                        doc.text('Room #', 90, yPos + 5);
-                        doc.text('Bookings', 110, yPos + 5);
-                        doc.text('Revenue (UGX)', 130, yPos + 5);
-                        doc.text('Nights', 160, yPos + 5);
-                        doc.text('Occupancy', 175, yPos + 5);
-                        
-                        yPos += 10;
-                        doc.setTextColor(0, 0, 0);
                     }
                     
                     doc.text(room.rank.toString(), 20, yPos);
                     doc.text(room.roomName, 40, yPos);
-                    doc.text(room.roomNumber, 90, yPos);
-                    doc.text(room.bookings.toString(), 110, yPos);
-                    doc.text(room.revenue.toLocaleString(), 130, yPos);
-                    doc.text(room.nights.toString(), 160, yPos);
-                    doc.text(room.occupancy + '%', 175, yPos);
+                    doc.text(room.bookings.toString(), 70, yPos);
+                    doc.text(room.revenue.toLocaleString(), 100, yPos);
+                    doc.text(room.nights.toString(), 140, yPos);
+                    doc.text(room.occupancy + '%', 160, yPos);
                     
                     yPos += 7;
                 });
@@ -4433,423 +3787,6 @@
             } catch (error) {
                 console.error('Error exporting PDF:', error);
                 showAlert('Error exporting PDF: ' + error.message, 'error');
-            }
-        }
-
-        // ============================
-        // ONLINE BOOKING SYSTEM
-        // ============================
-        function openOnlineBooking() {
-            onlineBookingPortal.style.display = 'flex';
-            resetOnlineBookingForm();
-            loadOnlineRooms();
-        }
-
-        function closeOnlineBooking() {
-            onlineBookingPortal.style.display = 'none';
-            onlineCurrentStep = 1;
-            resetOnlineBookingForm();
-        }
-
-        function resetOnlineBookingForm() {
-            // Set default dates
-            const today = new Date();
-            const tomorrow = new Date(today);
-            tomorrow.setDate(tomorrow.getDate() + 1);
-            
-            document.getElementById('onlineCheckin').value = today.toISOString().split('T')[0];
-            document.getElementById('onlineCheckout').value = tomorrow.toISOString().split('T')[0];
-            document.getElementById('onlineNights').value = 1;
-            
-            // Reset other fields
-            document.getElementById('onlineGuestName').value = '';
-            document.getElementById('onlineGuestEmail').value = '';
-            document.getElementById('onlineGuestPhone').value = '';
-            document.getElementById('onlineGuestId').value = '';
-            document.getElementById('onlineGuestsCount').value = '1';
-            
-            // Reset selections
-            onlineSelectedRooms = [];
-            onlineSelectedPaymentMethod = null;
-            
-            // Reset steps
-            showOnlineStep(1);
-            
-            // Reset payment method UI
-            ['mobileMoneyOption', 'visaOption', 'cashOption'].forEach(id => {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.style.borderColor = '#ddd';
-                    element.style.backgroundColor = 'white';
-                }
-            });
-            ['mobileMoneyDetails', 'visaDetails', 'cashDetails'].forEach(id => {
-                const element = document.getElementById(id);
-                if (element) element.style.display = 'none';
-            });
-            
-            updateOnlineSummary();
-        }
-
-        function showOnlineStep(step) {
-            onlineCurrentStep = step;
-            
-            // Hide all steps
-            for (let i = 1; i <= 4; i++) {
-                const stepElement = document.getElementById(`onlineStep${i}`);
-                if (stepElement) stepElement.style.display = 'none';
-            }
-            
-            // Show current step
-            const currentStepElement = document.getElementById(`onlineStep${step}`);
-            if (currentStepElement) currentStepElement.style.display = 'block';
-            
-            // Update summary if on step 3
-            if (step === 3) {
-                updateOnlineSummary();
-            }
-        }
-
-        function showOnlineStep1() {
-            showOnlineStep(1);
-        }
-
-        function showOnlineStep2() {
-            // Validate step 1
-            if (!validateOnlineStep1()) {
-                showAlert('Please fill all required fields in Step 1', 'error');
-                return;
-            }
-            showOnlineStep(2);
-        }
-
-        function showOnlineStep3() {
-            // Validate room selection
-            if (onlineSelectedRooms.length === 0) {
-                showAlert('Please select at least one room', 'error');
-                return;
-            }
-            showOnlineStep(3);
-        }
-
-        function validateOnlineStep1() {
-            const name = document.getElementById('onlineGuestName').value;
-            const email = document.getElementById('onlineGuestEmail').value;
-            const phone = document.getElementById('onlineGuestPhone').value;
-            const checkin = document.getElementById('onlineCheckin').value;
-            const checkout = document.getElementById('onlineCheckout').value;
-            
-            if (!name || !email || !phone || !checkin || !checkout) {
-                return false;
-            }
-            
-            // Validate dates
-            const checkinDate = new Date(checkin);
-            const checkoutDate = new Date(checkout);
-            if (checkoutDate <= checkinDate) {
-                showAlert('Check-out date must be after check-in date', 'error');
-                return false;
-            }
-            
-            // Calculate nights
-            const timeDiff = checkoutDate.getTime() - checkinDate.getTime();
-            const nights = Math.ceil(timeDiff / (1000 * 3600 * 24));
-            document.getElementById('onlineNights').value = nights;
-            
-            return true;
-        }
-
-        async function loadOnlineRooms() {
-            try {
-                const onlineRoomsContainer = document.getElementById('onlineRoomsContainer');
-                onlineRoomsContainer.innerHTML = '';
-                
-                // Use default rooms
-                rooms.forEach(room => {
-                    if (room.status === 'available') {
-                        const roomCard = createOnlineRoomCard(room);
-                        onlineRoomsContainer.appendChild(roomCard);
-                    }
-                });
-                
-                if (onlineRoomsContainer.children.length === 0) {
-                    onlineRoomsContainer.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #666; padding: 20px;">No rooms available for the selected dates.</p>';
-                }
-            } catch (error) {
-                console.error('Error loading online rooms:', error);
-                const onlineRoomsContainer = document.getElementById('onlineRoomsContainer');
-                onlineRoomsContainer.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: #e74c3c; padding: 20px;">Error loading rooms. Please try again.</p>';
-            }
-        }
-
-        function createOnlineRoomCard(room) {
-            const card = document.createElement('div');
-            card.className = 'room-card';
-            card.style.cssText = `
-                background: white;
-                border: 2px solid #ddd;
-                border-radius: 10px;
-                padding: 15px;
-                text-align: center;
-                cursor: pointer;
-                transition: all 0.3s;
-            `;
-            
-            const isSelected = onlineSelectedRooms.includes(room.id);
-            
-            if (isSelected) {
-                card.style.borderColor = '#27ae60';
-                card.style.backgroundColor = 'rgba(39, 174, 96, 0.1)';
-            }
-            
-            card.innerHTML = `
-                <div style="font-size: 24px; color: #3498db; margin-bottom: 10px;">
-                    <i class="fas fa-bed"></i>
-                </div>
-                <div style="font-weight: bold; color: #2c3e50; margin-bottom: 5px;">${room.name}</div>
-                <div style="color: #666; font-size: 14px; margin-bottom: 10px;">${room.number}</div>
-                <div style="color: #27ae60; font-weight: bold; margin-bottom: 10px;">50,000 UGX/night</div>
-                <div style="font-size: 12px; color: #666;">Click to ${isSelected ? 'deselect' : 'select'}</div>
-            `;
-            
-            card.addEventListener('click', () => {
-                toggleOnlineRoomSelection(room.id);
-                // Update card appearance
-                if (onlineSelectedRooms.includes(room.id)) {
-                    card.style.borderColor = '#27ae60';
-                    card.style.backgroundColor = 'rgba(39, 174, 96, 0.1)';
-                } else {
-                    card.style.borderColor = '#ddd';
-                    card.style.backgroundColor = 'white';
-                }
-                
-                // Update selection text
-                const textDiv = card.querySelector('div:nth-child(5)');
-                if (textDiv) {
-                    textDiv.textContent = `Click to ${onlineSelectedRooms.includes(room.id) ? 'deselect' : 'select'}`;
-                }
-            });
-            
-            return card;
-        }
-
-        function toggleOnlineRoomSelection(roomId) {
-            const index = onlineSelectedRooms.indexOf(roomId);
-            if (index === -1) {
-                onlineSelectedRooms.push(roomId);
-            } else {
-                onlineSelectedRooms.splice(index, 1);
-            }
-            updateOnlineSummary();
-        }
-
-        function selectPaymentMethod(method) {
-            onlineSelectedPaymentMethod = method;
-            
-            // Reset all payment options
-            ['mobileMoneyOption', 'visaOption', 'cashOption'].forEach(id => {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.style.borderColor = '#ddd';
-                    element.style.backgroundColor = 'white';
-                    const iconDiv = element.querySelector('div');
-                    if (iconDiv) iconDiv.style.transform = 'scale(1)';
-                }
-            });
-            
-            // Hide all details
-            ['mobileMoneyDetails', 'visaDetails', 'cashDetails'].forEach(id => {
-                const element = document.getElementById(id);
-                if (element) element.style.display = 'none';
-            });
-            
-            // Highlight selected option
-            const selectedOption = document.getElementById(`${method}Option`);
-            if (selectedOption) {
-                selectedOption.style.borderColor = '#3498db';
-                selectedOption.style.backgroundColor = 'rgba(52, 152, 219, 0.1)';
-                const iconDiv = selectedOption.querySelector('div');
-                if (iconDiv) iconDiv.style.transform = 'scale(1.1)';
-            }
-            
-            // Show details for selected option
-            const detailsId = `${method}Details`;
-            const detailsElement = document.getElementById(detailsId);
-            if (detailsElement) detailsElement.style.display = 'block';
-            
-            // Update summary
-            updateOnlineSummary();
-        }
-
-        function updateOnlineSummary() {
-            const nights = parseInt(document.getElementById('onlineNights').value) || 1;
-            const roomCount = onlineSelectedRooms.length;
-            const totalAmount = roomCount * nights * 50000;
-            
-            const selectedRoomsCountElement = document.getElementById('onlineSelectedRoomsCount');
-            const selectedNightsElement = document.getElementById('onlineSelectedNights');
-            const totalAmountElement = document.getElementById('onlineTotalAmount');
-            const paymentMethodElement = document.getElementById('onlinePaymentMethod');
-            const submitBtn = document.getElementById('submitOnlineBookingBtn');
-            
-            if (selectedRoomsCountElement) selectedRoomsCountElement.textContent = roomCount;
-            if (selectedNightsElement) selectedNightsElement.textContent = nights;
-            if (totalAmountElement) totalAmountElement.textContent = totalAmount.toLocaleString() + ' UGX';
-            
-            if (onlineSelectedPaymentMethod) {
-                let methodText = '';
-                switch(onlineSelectedPaymentMethod) {
-                    case 'mobile_money': methodText = 'Mobile Money'; break;
-                    case 'visa': methodText = 'Visa/Mastercard'; break;
-                    case 'cash': methodText = 'Pay on Arrival'; break;
-                }
-                if (paymentMethodElement) paymentMethodElement.textContent = methodText;
-            } else {
-                if (paymentMethodElement) paymentMethodElement.textContent = 'Not selected';
-            }
-            
-            // Update submit button
-            if (submitBtn) {
-                if (roomCount === 0 || !onlineSelectedPaymentMethod) {
-                    submitBtn.disabled = true;
-                    submitBtn.style.opacity = '0.6';
-                    submitBtn.style.cursor = 'not-allowed';
-                } else {
-                    submitBtn.disabled = false;
-                    submitBtn.style.opacity = '1';
-                    submitBtn.style.cursor = 'pointer';
-                }
-            }
-        }
-
-        async function submitOnlineBooking() {
-            // Validate
-            if (!validateOnlineStep1()) {
-                showAlert('Please complete all steps', 'error');
-                return;
-            }
-            
-            if (onlineSelectedRooms.length === 0) {
-                showAlert('Please select at least one room', 'error');
-                return;
-            }
-            
-            if (!onlineSelectedPaymentMethod) {
-                showAlert('Please select a payment method', 'error');
-                return;
-            }
-            
-            // Create a unique booking ID
-            const bookingId = 'PMK-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
-            
-            // Create booking data for each selected room
-            const checkinDate = document.getElementById('onlineCheckin').value;
-            const checkoutDate = document.getElementById('onlineCheckout').value;
-            const nights = parseInt(document.getElementById('onlineNights').value);
-            const totalCost = onlineSelectedRooms.length * nights * 50000;
-            const bookingGroupId = Date.now().toString();
-            
-            try {
-                const bookingsRef = window.firebase.collection(window.firebase.db, 'bookings');
-                let successCount = 0;
-                
-                for (const roomId of onlineSelectedRooms) {
-                    const room = rooms.find(r => r.id === roomId);
-                    
-                    if (!room) {
-                        console.error('Room not found:', roomId);
-                        continue;
-                    }
-                    
-                    const bookingData = {
-                        guestName: document.getElementById('onlineGuestName').value,
-                        guestEmail: document.getElementById('onlineGuestEmail').value,
-                        guestPhone: document.getElementById('onlineGuestPhone').value,
-                        guestId: document.getElementById('onlineGuestId').value,
-                        checkinDate: checkinDate,
-                        checkoutDate: checkoutDate,
-                        nights: nights,
-                        guestsCount: parseInt(document.getElementById('onlineGuestsCount').value),
-                        room: roomId,
-                        roomName: room.name,
-                        roomNumber: room.number,
-                        paymentMethod: onlineSelectedPaymentMethod,
-                        totalCost: nights * 50000,
-                        status: 'pending',
-                        bookingType: 'online',
-                        paymentStatus: onlineSelectedPaymentMethod === 'cash' ? 'pending' : 'unpaid',
-                        createdAt: window.firebase.serverTimestamp(),
-                        bookingDate: new Date().toISOString().split('T')[0],
-                        bookingGroupId: bookingGroupId,
-                        bookingId: bookingId,
-                        notes: `Online booking - Payment: ${getPaymentMethodText(onlineSelectedPaymentMethod)}`,
-                        revenue: nights * 50000
-                    };
-                    
-                    try {
-                        await window.firebase.addDoc(bookingsRef, bookingData);
-                        successCount++;
-                    } catch (error) {
-                        console.error('Error creating booking for room', roomId, error);
-                    }
-                }
-                
-                if (successCount > 0) {
-                    // Show confirmation
-                    document.getElementById('onlineBookingId').textContent = bookingId;
-                    document.getElementById('onlineBookingEmail').textContent = document.getElementById('onlineGuestEmail').value;
-                    showOnlineStep(4);
-                    
-                    // Reset form
-                    resetOnlineBookingForm();
-                    
-                    // Show success message
-                    showAlert(`Online booking submitted successfully! Booking ID: ${bookingId}`, 'success');
-                    
-                    // If admin is logged in, refresh bookings
-                    if (currentUser) {
-                        loadBookings();
-                    }
-                } else {
-                    showAlert('Failed to create booking. Please try again.', 'error');
-                }
-                
-            } catch (error) {
-                console.error('Error submitting online booking:', error);
-                showAlert('Error submitting booking. Please try again or call us directly.', 'error');
-            }
-        }
-
-        function getPaymentMethodText(method) {
-            switch(method) {
-                case 'mobile_money': return 'Mobile Money';
-                case 'visa': return 'Visa/Mastercard';
-                case 'cash': return 'Pay on Arrival';
-                default: return 'Unknown';
-            }
-        }
-
-        function callForHelp() {
-            window.location.href = 'tel:+256772XXXXXX';
-        }
-
-        function updateOnlineNights() {
-            const checkin = document.getElementById('onlineCheckin').value;
-            const checkout = document.getElementById('onlineCheckout').value;
-            
-            if (checkin && checkout) {
-                const checkinDate = new Date(checkin);
-                const checkoutDate = new Date(checkout);
-                const timeDiff = checkoutDate.getTime() - checkinDate.getTime();
-                const nights = Math.ceil(timeDiff / (1000 * 3600 * 24));
-                
-                if (nights > 0) {
-                    document.getElementById('onlineNights').value = nights;
-                } else {
-                    document.getElementById('onlineNights').value = 1;
-                }
-                
-                updateOnlineSummary();
             }
         }
 
@@ -4867,6 +3804,7 @@
                 }
                 
                 const booking = docSnap.data();
+                const room = rooms.find(r => r.id === booking.room);
                 
                 // Create print content
                 const printContent = `
@@ -4933,7 +3871,7 @@
                                     </div>
                                     <div class="info-item">
                                         <div class="info-label">Room:</div>
-                                        <div class="info-value">${booking.roomName || booking.room} (${booking.roomNumber || ''})</div>
+                                        <div class="info-value">${room ? room.name : booking.room} (${room ? room.number : ''})</div>
                                     </div>
                                     <div class="info-item">
                                         <div class="info-label">Check-in Date:</div>
@@ -4975,7 +3913,7 @@
                         
                         <div class="footer">
                             <p>Thank you for choosing Peak Motel Kasese!</p>
-                            <p>For inquiries: +256 XXX XXX XXX | Email: info@peakmotel.com</p>
+                            <p>For inquiries: +256 783 013435 | Email: info@peakmotel.com</p>
                             <p>Generated on: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}</p>
                         </div>
                         
@@ -5015,9 +3953,10 @@
                 
                 const firstBooking = groupBookings[0];
                 const totalAmount = groupBookings.reduce((sum, b) => sum + (b.totalCost || 0), 0);
-                const roomList = groupBookings.map(b => 
-                    `${b.roomName || b.room} (${b.roomNumber || ''})`
-                ).join(', ');
+                const roomList = groupBookings.map(b => {
+                    const room = rooms.find(r => r.id === b.room);
+                    return `${room ? room.name : b.room} (${room ? room.number : ''})`;
+                }).join(', ');
                 
                 // Create print content
                 const printContent = `
@@ -5090,7 +4029,7 @@
                                     </div>
                                     <div class="info-item">
                                         <div class="info-label">Nights:</div>
-                                        <div class="info-value">${firstBooking.nights}</td>
+                                        <div class="info-value">${firstBooking.nights}</div>
                                     </div>
                                     <div class="info-item">
                                         <div class="info-label">Status:</div>
@@ -5102,12 +4041,15 @@
                             <div class="section">
                                 <h3>Rooms Booked (${groupBookings.length} rooms)</h3>
                                 <div class="rooms-list">
-                                    ${groupBookings.map((booking, index) => `
-                                        <div class="room-item">
-                                            <strong>Room ${index + 1}:</strong> ${booking.roomName || booking.room} (${booking.roomNumber || ''}) - 
-                                            ${booking.nights} night(s) @ 50,000 UGX = ${(booking.totalCost || 0).toLocaleString()} UGX
-                                        </div>
-                                    `).join('')}
+                                    ${groupBookings.map((booking, index) => {
+                                        const room = rooms.find(r => r.id === booking.room);
+                                        return `
+                                            <div class="room-item">
+                                                <strong>Room ${index + 1}:</strong> ${room ? room.name : booking.room} (${room ? room.number : ''}) - 
+                                                ${booking.nights} night(s) @ 50,000 UGX = ${(booking.totalCost || 0).toLocaleString()} UGX
+                                            </div>
+                                        `;
+                                    }).join('')}
                                 </div>
                             </div>
                             
@@ -5224,11 +4166,6 @@
             
             // Set up Firebase Authentication
             setupFirebaseAuth();
-            
-            // Initialize online booking button (always visible)
-            if (onlineBookingBtn) {
-                onlineBookingBtn.style.display = 'flex';
-            }
         });
 
         // Make functions available globally for onclick handlers
@@ -5245,14 +4182,22 @@
         window.toggleChart = toggleChart;
         window.printBooking = printBooking;
         window.printBookingGroup = printBookingGroup;
-        window.openOnlineBooking = openOnlineBooking;
-        window.closeOnlineBooking = closeOnlineBooking;
-        window.showOnlineStep1 = showOnlineStep1;
-        window.showOnlineStep2 = showOnlineStep2;
-        window.showOnlineStep3 = showOnlineStep3;
-        window.selectPaymentMethod = selectPaymentMethod;
-        window.submitOnlineBooking = submitOnlineBooking;
-        window.callForHelp = callForHelp;
     </script>
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
